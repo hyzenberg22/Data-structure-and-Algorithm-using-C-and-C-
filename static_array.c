@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 
-// This is the structure of the Array
+// This is the structure of the Array, 1. array is defined 20. no of elements of the array ie,size and the length of the array ie , 20-max
 struct Array{
     int A[20];
     int size;
@@ -47,7 +47,7 @@ void insert_arr(struct Array *arr, int index, int value){
 }
 
 
-// Making a Function For Deleating a Array
+// Making a Function For Deleating an Array
 
 void Array_delete( struct Array *arr, int index){
     int i;
