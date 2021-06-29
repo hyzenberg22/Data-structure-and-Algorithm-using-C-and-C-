@@ -82,5 +82,13 @@ int main(){
     display_array(arr1);
     Array_delete(&arr1, 2);
     display_array(arr1);
+
+
+
+
+
+
+
+    
     return 0;
 }
