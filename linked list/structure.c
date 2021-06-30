@@ -54,11 +54,48 @@ void rev_r_display(struct node *p){
     }
 }
 
+// This is for thw counting of the nodes
+int list_count(struct node *p){
+    int length = 0;
+    while (p)       
+    {
+        length++; // Increase the length 
+        p = p->next; // Move the pointer to the next Node
+    }
+    return length;
+}
 
 
+// This is for the recursive count of the List 
+int rec_count_lst(struct node *p){
+    if(p!= NULL){
+        return rec_count_lst(p->next)+1 ;
+    }
+    else{
+        return 0;
+    }
+}
+// This is the sum of the Elements of the Linked List by the Itertive Process
+int sum_lst(struct node *p){
+    int sum = 0;
+    while (p!= NULL)
+    {
+        sum += p->data;
+        p = p->next;
+    }
+    return sum;
+    
+}
 
-
-
+// This is the sum of the elements of the LInked List By the Recursive Process
+int rec_sum_lst(struct node *p){
+    if(p==NULL){
+        return 0;
+    }
+    else{
+        rec_sum_lst(p->next)+ p->data;
+    }
+}
 
 // This is the main Function
 int main(){
