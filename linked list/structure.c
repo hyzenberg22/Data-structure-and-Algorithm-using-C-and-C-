@@ -2,6 +2,8 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#define INT32_MIN -32768 // Defining the min int possible in the 2byte int 
+
 
 // make the structure for the node
 struct node{
@@ -96,14 +98,56 @@ int rec_sum_lst(struct node *p){
         rec_sum_lst(p->next)+ p->data;
     }
 }
+// This is for the max elemaent in the Linked list.
+
+int max_element(struct node *p){
+    int max = INT32_MIN;// The minimus int possible in the 2byte int
+    while (p)
+    {
+        if(p->data > max){ // If any value founed, grater then the data then assign it to the max
+            max = p->data;
+        }
+        p = p->next; //Update the pointer
+    }
+    return max;
+    
+}
+
+// This is the Recursive approach for finding the Max of the Linked List
+
+int rec_max_element(struct node *p){
+    int x = 0 ;
+
+    if(p==0){
+        return INT32_MIN;
+    }
+    x = rec_max_element(p -> next);
+    return (x > p -> data) ? x : p ->data;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // This is the main Function
 int main(){
-    int A[] = {3,5,7,10,15};
-    creat(A, 5);
+    int A[] = {3,5,7,10,15,25};
+    creat(A, 6);
     // display_list(first);
-    r_display(first);
-    printf("\n");
-    rev_r_display(first);
+    // r_display(first);
+    // printf("\n");
+    // rev_r_display(first);
+    printf("%d", rec_max_element(first));
     return 0;
 }
