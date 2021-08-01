@@ -98,8 +98,9 @@ int rec_sum_lst(struct node *p){
         rec_sum_lst(p->next)+ p->data;
     }
 }
-// This is for the max elemaent in the Linked list.
 
+
+// This is for the max elemaent in the Linked list.
 int max_element(struct node *p){
     int max = INT32_MIN;// The minimus int possible in the 2byte int
     while (p)
@@ -114,7 +115,6 @@ int max_element(struct node *p){
 }
 
 // This is the Recursive approach for finding the Max of the Linked List
-
 int rec_max_element(struct node *p){
     int x = 0 ;
 
@@ -126,7 +126,11 @@ int rec_max_element(struct node *p){
 }
 
 
+// Linier Search In the Linked list
 
+struct node* search(struct node *p, int key){
+
+}
 
 
 
